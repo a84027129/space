@@ -1,0 +1,9 @@
+schema: 雾凇拼音
+symbol: default
+emotion: default
+config_version: 5.0
+sound_on: false
+sound_volume: 0
+sound_effect: default
+haptics_on: true
+haptics_volume: 1
