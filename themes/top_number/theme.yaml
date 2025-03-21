@@ -128,7 +128,7 @@ preset_candidates:
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
   #2,同时有back_color和back_image时，back_image生效.
-preset_color_schemas:
+preset_color_schemes:
    default:
 
     primary-100: &primary-100 0x2E8B57
@@ -641,6 +641,7 @@ preset_keyboards:
 
   english:
     ascii_mode: 1
+    lock: true
     name: english_keyboard
     keys:
       #0
@@ -741,7 +742,7 @@ preset_keyboards:
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 1
     horizontal_gap: 6
-    vertical_gap: 7.5
+    vertical_gap: 24
     name: number_keyboard
     preview: false
     height: 46

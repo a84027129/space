@@ -531,6 +531,7 @@ preset_keyboards:
   english:
     ascii_mode: 1
     name: english_keyboard
+    lock: true
     keys:
       #1
       - {click: q, swipe_up: commit_1, long_click: [1, Q, q]}
