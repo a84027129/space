@@ -1,7 +1,12 @@
-schema: 雾凇拼音
+schema: rime-ice
+schema_dir: schemas/
+theme: t9
+theme_dir: themes/
 symbol: default
+symbol_dir: symbols/
 emotion: default
-config_version: 5.0
+emotion_dir: emotions/
+config_version: 1.0
 sound_on: false
 sound_volume: 0
 sound_effect: default
