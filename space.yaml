@@ -1,4 +1,4 @@
-schema: rime-ice
+schema: bim-pinyin
 schema_dir: schemas/
 theme: t9
 theme_dir: themes/
