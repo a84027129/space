@@ -43,11 +43,15 @@ preset_styles:
     font: default
   light_land:
     color_schema: default
-    candidate: default
+    candidate: default_land
     font: default
   dark:
     color_schema: dark
     candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
     font: default
 
 #预设的字体
@@ -109,7 +113,7 @@ preset_candidates:
     candidate_view_height: 44 #候选区高度
     comment_height: 12 #编码提示区高度
     comment_on_top: true #编码提示在上方或右侧
-    text_height: 20 #编码区高度
+    text_height: 12 #编码区高度
     more_button_width: 44 #更多按钮宽度
     corner_radius: 6 #圆角半径
     hilited_corner_radius: 6 #高亮圆角半径
@@ -121,7 +125,9 @@ preset_candidates:
         more_button_width: 64
       candidate_menu:
         spacing: 28
-
+  default_land:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
   #2,同时有back_color和back_image时，back_image生效.
@@ -495,6 +501,7 @@ preset_keyboards:
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     horizontal_gap: 6
     vertical_gap: 10
+    vertical_gap_land: 3
     name: number_keyboard
     preview: false
     height: 46
@@ -502,7 +509,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["，", "。", "？", "！", "…", "~", "'", "、"], width: 17, height: 162, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["，", "。", "？", "！", "…", "~", "'", "、"], width: 17, height: 162, height_land: 97, row_height: 39, row_height_land: 30, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, label: '分词', height: 50, swipe_up: commit_1,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
       - {click: a, label: 'ABC', height: 50, swipe_up: commit_2,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
       - {click: d, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F]}
@@ -520,7 +527,7 @@ preset_keyboards:
       - {click: p, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S]}
       - {click: t, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V]}
       - {click: w, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z]}
-      - {click: return, name: return, width: 17, height: 100, height_land: 70, composing: confirm}
+      - {click: return, name: return, width: 17, height: 100, height_land: 64, composing: confirm}
       ## #4
       - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
       - {click: eisu_toggle_123_number, width: 12, height: 44}
@@ -532,7 +539,6 @@ preset_keyboards:
   english:
     height: 46
     width: 10
-    vertical_gap: 10
     preview: true
     ascii_mode: 1
     lock: true
@@ -585,7 +591,6 @@ preset_keyboards:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 1
-    horizontal_gap: 6
     name: number_keyboard
     preview: false
     height: 46
@@ -593,7 +598,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 97, row_height: 39, row_height_land: 30, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
@@ -622,7 +627,6 @@ preset_keyboards:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 0
-    vertical_gap: 10
     preview: true
     height: 46
     width: 10
@@ -695,7 +699,6 @@ preset_keyboards:
       # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
       - {click: return, width: 20, name: return, composing: confirm}
   half_symbols:
-    vertical_gap: 10
     preview: true
     ascii_mode: 0
     height: 46

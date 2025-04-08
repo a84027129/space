@@ -35,9 +35,17 @@ preset_styles:
     color_schema: default
     candidate: default
     font: default
+  light_land:
+    color_schema: default
+    candidate: default_land
+    font: default
   dark:
     color_schema: dark
     candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
     font: default
 
 #预设的字体
@@ -99,7 +107,7 @@ preset_candidates:
     candidate_view_height: 44 #候选区高度
     comment_height: 12 #编码提示区高度
     comment_on_top: true #编码提示在上方或右侧
-    text_height: 20 #编码区高度
+    text_height: 12 #编码区高度
     more_button_width: 44 #更多按钮宽度
     corner_radius: 6 #圆角半径
     hilited_corner_radius: 6 #高亮圆角半径
@@ -111,6 +119,9 @@ preset_candidates:
         more_button_width: 64
       candidate_menu:
         spacing: 28
+  default_land:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
 
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
@@ -466,6 +477,7 @@ preset_keyboards:
     height_land: 30
     horizontal_gap: 6
     vertical_gap: 10
+    vertical_gap_land: 3
     round_corner: 6
     key_text_offset_x: 0
     key_text_offset_y: 0
@@ -576,44 +588,6 @@ preset_keyboards:
       #- {click: eisu_toggle_返回_default, width: 11, name: english}
       - {click: eisu_toggle_返回_default_schema_default, width: 12, name: english, preview: false}
       - {click: return, width: 14, name: return, composing: confirm}
-  number_land:
-    #。？！…（））；、～:[]ï`#：+*/×
-    menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
-    ascii_mode: 1
-    horizontal_gap: 6
-    vertical_gap: 6.5
-    name: number_keyboard
-    preview: false
-    height: 46
-    width: 22
-    keys:
-      #1
-      # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 115, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
-      - {click: 1, height: 34}
-      - {click: 2, height: 34}
-      - {click: 3, height: 34}
-      - {click: backspace, width: 17, height: 34, name: backspace}
-
-      # # #2
-      - {width: 17}
-      - {click: 4, height: 34}
-      - {click: 5, height: 34}
-      - {click: 6, height: 34}
-      - {click: send_dot, width: 17, height: 34, name: dot}
-
-      - {width: 17}
-      - {click: 7, height: 34}
-      - {click: 8, height: 34}
-      - {click: 9, height: 34}
-      - {click: commit_halfat, width: 17, height: 34, name: halfat}
-
-      # - {width: 1}
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 32, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 32}
-      - {click: commit_0, height: 32}
-      - {click: space, name: space, height: 32}
-      - {click: return, name: return, width: 17, height: 32, composing: confirm}
 
   number:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -626,7 +600,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 97, row_height: 39, row_height_land: 30, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
@@ -645,7 +619,6 @@ preset_keyboards:
       - {click: 9, height: 50}
       - {click: commit_halfat, width: 17, height: 50, name: halfat}
 
-      # - {width: 1}
       - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
       - {click: eisu_toggle_返回_default, width: 22, height: 44}
       - {click: commit_0, height: 44}
