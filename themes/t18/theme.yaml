@@ -111,9 +111,9 @@ preset_candidates:
   default:
     margin: 5 #候选项外边距
     padding: 5 #候选项内边距
-    spacing: 5 #候选间距
+    spacing: 8 #候选间距
     use_cursor: true #高亮候选项
-    candidate_view_height: 44 #候选区高度
+    candidate_view_height: 36 #候选区高度
     comment_height: 12 #编码提示区高度
     comment_on_top: true #编码提示在上方或右侧
     text_height: 20 #编码区高度
@@ -128,9 +128,9 @@ preset_candidates:
         more_button_width: 64
       candidate_menu:
         spacing: 28
-  default:
+  default_land:
     candidate_view_height: 44 #候选区高度
-    text_height: 20 #编码区高度
+    text_height: 0 #编码区高度
 
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
@@ -487,10 +487,10 @@ preset_keyboards:
   default:
     ascii_mode: 0
     height: 46
-    height_land: 30
+    height_land: 34
     horizontal_gap: 6
     vertical_gap: 10
-    vertical_gap_land: 3
+    vertical_gap_land: 4
     round_corner: 6
     key_text_offset_x: 0
     key_text_offset_y: 0
@@ -604,7 +604,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 97, row_height: 39, row_height_land: 30, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
