@@ -19,7 +19,7 @@ style:
     dark: dark #竖屏
     dark_land: dark_land #横屏
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
-#    keyboards_land: [ default_land, english, number_land, symbols ] #横屏
+  #    keyboards_land: [ default_land, english, number_land, symbols ] #横屏
   iOS:
     light: light #竖屏
     light_land: light_land #横屏
@@ -133,7 +133,7 @@ preset_candidates:
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
   #2,同时有back_color和back_image时，back_image生效.
 preset_color_schemes:
-   default:
+  default:
 
     primary-100: &primary-100 0x2E8B57
     primary-200: &primary-200 0x61bc84
@@ -300,7 +300,7 @@ preset_color_schemes:
 
 
 
-   dark:
+  dark:
     #Dark Sage Green
     primary-100: &primary-100 0x2E8B57
     primary-200: &primary-200 0x61bc84
@@ -385,7 +385,7 @@ preset_color_schemes:
     specified_name:
       candidate_menu:
         candidate_text_color: *primary-100
-      # candidate_symbol_right:
+        # candidate_symbol_right:
         # candidate_back_color: *accent-100
       candidate_symbol_left:
         candidate_back_color: *primary-100
@@ -475,9 +475,9 @@ preset_color_schemes:
         hilited_key_text_color: *text-100
 
 
- 
 
-  
+
+
 
 #键盘布局
 preset_keyboards:
@@ -505,7 +505,7 @@ preset_keyboards:
     preview: true
     shadow: {radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C"}
     menu: {spacing: 28, first_scrollable: false, last_scrollable: false, events: [eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard] }
-#现在只支持配置click,swipe_up,swipe_down键盘
+    #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
       # 1
       - {click: q, label: Q, swipe_up: commit_1,  swipe_down: "一", long_click: [。, commit_1, commit_Q]}
@@ -548,11 +548,11 @@ preset_keyboards:
       # - {width: 0.5}
       - {click: space, width: 38, name: space, swipe_up: send_2, preview: false}
       - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false}
-#      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
+      #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
       # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
       - {click: return, width: 24, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
     width: 10
-    
+
   english:
     ascii_mode: 1
     lock: true
@@ -645,7 +645,7 @@ preset_keyboards:
     ascii_mode: 0
     name: symbols
     keys:
-    #1
+      #1
       - {click: 1, long_click: ["1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
       - {click: 2, long_click: ["2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
       - {click: 3, long_click: ["3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
@@ -709,14 +709,14 @@ preset_keyboards:
       - {click: eisu_toggle_返回_default_schema_default, width: 13, name: default}
       - {click: eisu_toggle_123_number, name: numberPeriodFull, width: 13}
       - {click: space, width: 41, name: space}
-      - {click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false}
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false}
       # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
       - {click: return, width: 20, name: return, composing: confirm}
   half_symbols:
     name: half_symbols
     ascii_mode: 0
     keys:
-    #1
+      #1
       - { click: text_fullsquarebracketleft_left_default }
       - { click: text_fullsquarebracketright_default }
       - { click: text_halfleftbrace_default }
@@ -727,7 +727,7 @@ preset_keyboards:
       - { click: text_halfasterisk_default }
       - { click: text_halfplus_default }
       - { click: text_halfequal_default }
-    #2
+      #2
       - { click: text_halfunderline_default }
       - { click: text_halfminus_default }
       - { click: text_halfbackslash_default }
@@ -738,7 +738,7 @@ preset_keyboards:
       - { click: "$" }
       - { click: text_halfand_default }
       - { click: text_halfdot_default }
-    #3
+      #3
       - { click: eisu_toggle_123_number, width: 13, name: number}
       - { width: 1}
       - { click: "…", width: 12 }
@@ -749,7 +749,7 @@ preset_keyboards:
       - { click: text_fullapostrophe_default, width: 12 }
       - { width: 1}
       - { click: backspace, width: 13, name: backspace}
-    #4
+      #4
       - { click: eisu_toggle_ABC_default, width: 14, name: default}
       - {click: text_halfperiod_default, name: numberPeriodFull, width: 13}
       - { click: space, width: 38, name: space}
@@ -768,7 +768,7 @@ preset_keys:
 
   #注：当然命令不是硬性规定。各位也可以自定义
 
-   #打开设置
+  #打开设置
   #icon 目前只支持苹果内置的sf symbols,具体请搜索
 
   #设置
@@ -834,7 +834,7 @@ preset_keys:
 
   #eisu_toggle
   eisu_toggle_123_number: {label: 123, send: Eisu_toggle, select: number}
-#  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
+  #  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
   eisu_toggle_ABC_english: {label: "英", send: Eisu_toggle, select: english}
   eisu_toggle_ABC_english_schema_easy_en: {label: "ABC", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}"}
   eisu_toggle_符_symbols: {label: "符", send: Eisu_toggle, select: symbols}
@@ -845,10 +845,10 @@ preset_keys:
   eisu_toggle_123_dotNumber: {label: 123, send: Eisu_toggle, select: .number} #默认的9宫格数据键盘
   eisu_toggle_中_default: {label: 中, send: Eisu_toggle, select: default}
   eisu_toggle_返回_default: {label: 返回, send: Eisu_toggle, select: default}
-#  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  #  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
   eisu_toggle_返回_default_schema_default: {label: "中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
   eisu_toggle_default: {send: Eisu_toggle, select: default}
-#  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
+  #  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
   eisu_toggle_ABC_default: {label: "英", send: Eisu_toggle, select: default}
 
   #text
@@ -924,7 +924,7 @@ preset_keys:
   text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
   text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
   text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
-  text_fullquotationmark_left: {label: "\"", text: "“”{Left}"}
+  text_fullquotationmark_left: {label: "“", text: "“”{Left}"}
   # ""
   text_halfquotationmark_left_default: {label: "\"", text: "\"\"{Left}{eisu_toggle_default}"}
   text_halfquotationmarkclose_default: {label: "\"", text: "\"{eisu_toggle_default}"}
@@ -997,7 +997,7 @@ preset_keys:
   # :
   text_halfcolon_default: {label: "：", text: ":{eisu_toggle_default}"}
   text_fullcolon_default: {label: "：", text: "：{eisu_toggle_default}"}
-#  ï
+  #  ï
   text_fullsmile_default: {label: "ï", text: "ï{eisu_toggle_default}"}
 
 
@@ -1033,7 +1033,7 @@ preset_keys:
 
 
 
-#commit abc
+  #commit abc
   commit_q: {label: "q", commit: "q"}
   commit_w: {label: "w", commit: "w"}
   commit_e: {label: "e", commit: "e"}
