@@ -523,7 +523,7 @@ preset_keyboards:
       - {click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [commit_j, commit_J, commit_9, commit_k, commit_K]}
       - {click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [commit_l, commit_L, commit_0, commit_l, commit_L]}
       #3
-      - {click: ";", label: 分词, width: 13}
+      - {click: participle, width: 13}
       - {width: 3}
       - {click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [commit_z, commit_Z, commit_halfat, commit_x, commit_X]}
       - {click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_halfquestionmark, long_click: [commit_c, commit_C, commit_halfquestionmark, commit_v, commit_V]}
@@ -806,7 +806,8 @@ preset_keys:
   send_3: {label: "", send: 3}
   send_2: {label: "", send: 2}
   send_dot: {label: ".", send: .}
-
+  #分词
+  participle: {label: 分词, send: "'"}
   #换行
   next: {label: "换行", commit: "\n"}
 
