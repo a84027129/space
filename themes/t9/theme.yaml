@@ -516,12 +516,12 @@ preset_keyboards:
       - {click: p, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S]}
       - {click: t, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V]}
       - {click: w, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z]}
-      - {click: return, name: return, width: 17, height: 100, height_land: 73, composing: confirm}
+      - {click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm}
       ## #4
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
-      - {click: eisu_toggle_123_number, width: 12, height: 44}
-      - {click: space, name: space, width: 42, height: 44}
-      - {click: eisu_toggle_ABC_english, width: 12, height: 44}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default}
+      - {click: eisu_toggle_123_number, width: 12, height: 46}
+      - {click: space, name: space, width: 42, height: 46}
+      - {click: eisu_toggle_ABC_english, width: 12, height: 46}
       # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
 
