@@ -693,8 +693,7 @@ preset_keyboards:
       - {click: eisu_toggle_返回_default_schema_default, width: 13, name: default}
       - {click: eisu_toggle_123_number, name: numberPeriodFull, width: 13}
       - {click: space, width: 41, name: space}
-      - {click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false}
-      # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false}
       - {click: return, width: 20, name: return, composing: confirm}
   half_symbols:
     ascii_mode: 0
@@ -905,8 +904,8 @@ preset_keys:
   ##
   #引号 “”""＂＂「」『』
   # “”
-  text_fullquotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
-  text_full_quotation_mark_left_default_no_functional: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}", functional: false}
+  text_fullquotationmark_left_default: {label: "“", text: "“”{Left}{eisu_toggle_default}"}
+  text_full_quotation_mark_left_default_no_functional: {label: "“", text: "“”{Left}{eisu_toggle_default}", functional: false}
   text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
   text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
   text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
