@@ -659,11 +659,11 @@ preset_keyboards:
       - {click: commit_halfat, width: 17, height: 64, name: halfat}
 
       # - {width: 1}
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 58, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 58}
-      - {click: commit_0, height: 58}
-      - {click: space, name: space, height: 58}
-      - {click: return, name: return, width: 17, height: 58, composing: confirm}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 60, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 60}
+      - {click: commit_0, height: 60}
+      - {click: space, name: space, height: 60}
+      - {click: return, name: return, width: 17, height: 60, composing: confirm}
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
