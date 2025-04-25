@@ -919,8 +919,8 @@ preset_keys:
   ##
   #引号 “”""＂＂「」『』
   # “”
-  text_fullquotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
-  text_full_quotation_mark_left_default_no_functional: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}", functional: false}
+  text_fullquotationmark_left_default: {label: "“", text: "“”{Left}{eisu_toggle_default}"}
+  text_full_quotation_mark_left_default_no_functional: {label: "“", text: "“”{Left}{eisu_toggle_default}", functional: false}
   text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
   text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
   text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
