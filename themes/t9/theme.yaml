@@ -520,7 +520,7 @@ preset_keyboards:
       ## #4
       - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
       - {click: eisu_toggle_123_number, width: 12, height: 44}
-      - {click: space, name: space, width: 42, height: 44}
+      - {click: space, swipe_up: commit_0, name: space, width: 42, height: 44}
       - {click: eisu_toggle_ABC_english, width: 12, height: 44}
       # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
