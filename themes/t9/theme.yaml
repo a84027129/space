@@ -498,7 +498,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["，", "。", "？", "！", "…", "~", "'", "、"], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'"], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, label: '分词', height: 50, swipe_up: commit_1,  swipe_down: "一", long_click: [commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot]}
       - {click: a, label: 'ABC', height: 50, swipe_up: commit_2,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
       - {click: d, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F]}
