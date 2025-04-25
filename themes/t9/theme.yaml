@@ -587,7 +587,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
@@ -606,11 +606,11 @@ preset_keyboards:
       - {click: 9, height: 50}
       - {click: commit_halfat, width: 17, height: 50, name: halfat}
 
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 44}
-      - {click: commit_0, height: 44}
-      - {click: space, name: space, height: 44, width: 22}
-      - {click: return, name: return, width: 17, height: 44, composing: confirm}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 46}
+      - {click: commit_0, height: 46}
+      - {click: space, name: space, height: 46, width: 22}
+      - {click: return, name: return, width: 17, height: 46, composing: confirm}
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
