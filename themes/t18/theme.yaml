@@ -536,11 +536,11 @@ preset_keyboards:
       - {click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false}
       - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false}
       # - {width: 0.5}
-      - {click: space, width: 38, name: space, swipe_up: send_2, preview: false}
+      - {click: space, width: 38, name: space, swipe_up: select_scecond, preview: false}
       - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false}
 #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
       # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
-      - {click: return, width: 24, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
+      - {click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false}
     width: 10
 
 
@@ -815,7 +815,8 @@ preset_keys:
   participle: {label: 分词, send: "'"}
   #换行
   next: {label: "换行", commit: "\n"}
-
+  select_scecond: {label: "次选", send: 2}
+  select_third: {label: "三选", send: 3}
 
   #eisu_toggle_schem
   eisu_toggle_schema_en: {label: "ABC", send: Eisu_toggle, select: easy_en, option: schema}

@@ -558,11 +558,11 @@ preset_keyboards:
       - {click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false, height_land: 36}
       - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false, height_land: 36}
       # - {width: 0.5}
-      - {click: space, width: 38, name: space, swipe_up: send_2, preview: false, height_land: 36}
+      - {click: space, width: 38, name: space, swipe_up: select_scecond, preview: false, height_land: 36}
       - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false, height_land: 36}
 #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
       # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
-      - {click: return, width: 24, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false, height_land: 36}
+      - {click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false, height_land: 36}
     width: 10
 
   english:
@@ -858,7 +858,8 @@ preset_keys:
   send_3: {label: "", send: 3}
   send_2: {label: "", send: 2}
   send_dot: {label: ".", send: .}
-
+  select_scecond: {label: "次选", send: 2}
+  select_third: {label: "三选", send: 3}
   #换行
   next: {label: "换行", commit: "\n"}
 
