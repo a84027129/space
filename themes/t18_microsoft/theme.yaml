@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 version: "5.0"
-name: iRime 5 #方案名
+name: bim18 #方案名
 author: 筋斗云 #作者
 
 #style，preset_styles，preset_font，preset_candidates，preset_color_schemas，preset_keyboards 下的default键名是个公共的配置，没有填的话都从default里面取。
@@ -14,7 +14,7 @@ style:
     dark_land: dark_land #横屏
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
     # keyboards_land: [ default, english, number, symbols ] #横屏
-  HarmonyOS:
+  hmos:
     light: light #竖屏
     light_land: light_land #横屏
     dark: dark #竖屏
@@ -487,7 +487,6 @@ preset_keyboards:
   default:
     ascii_mode: 0
     height: 46
-    width: 10
     height_land: 34
     horizontal_gap: 6
     vertical_gap: 10
@@ -505,42 +504,49 @@ preset_keyboards:
     long_preview_round_corner: 9
     long_preview_padding: 0
     long_preview_margin: 4
-    preview: false
+    preview: true
     shadow: {radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C"}
     menu: {spacing: 28, first_scrollable: false, last_scrollable: false, events: [eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard] }
 #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
-      #1
-      - {click: q, width: 20, label: 'QW', swipe_up: commit_1, long_click: [commit_q, commit_Q, commit_1, commit_w, commit_W]}
-      - {click: e, width: 20, label: 'ER', swipe_up: commit_2, long_click: [commit_e, commit_E, commit_2, commit_r, commit_R]}
-      - {click: t, width: 20, label: 'TY', swipe_up: commit_3, long_click: [commit_t, commit_T, commit_3, commit_y, commit_Y]}
-      - {click: u, width: 20, label: 'UI', swipe_up: commit_4, long_click: [commit_u, commit_U, commit_4, commit_i, commit_I]}
-      - {click: o, width: 20, label: 'OP', swipe_up: commit_5, long_click: [commit_o, commit_O, commit_5, commit_p, commit_P]}
+      # 1
+      - {click: q, label: Q, width: 14.3, swipe_up: commit_1,  swipe_down: "一", long_click: [。, commit_1, commit_Q]}
+      - {click: w, label: WE, width: 14.3, swipe_up: commit_2,  swipe_down: "二", long_click: [commit_2, commit_W, commit_w]}
+      - {click: r, label: RT, width: 14.3, swipe_up: commit_3,  swipe_down: "", long_click: [commit_3, commit_R, commit_r]}
+      - {click: y, label: Y, width: 14.3, swipe_up: commit_4,  swipe_down: "六", long_click: [commit_4, commit_Y, commit_y]}
+      - {click: u, label: U, width: 14.3, swipe_up: commit_5,  swipe_down: "七", long_click: [commit_5, commit_U, commit_u]}
+      - {click: i, label: IO, width: 14.3, swipe_up: commit_6,  swipe_down: "八", long_click: [commit_6, commit_I, commit_i]}
+      - {click: p, label: P, width: 14.3, swipe_up: commit_7,  swipe_down: "〇", long_click: [commit_7, commit_P, commit_p]}
       #2
-      - {click: a, width: 20, label: 'AS', swipe_up: commit_6, long_click: [commit_a, commit_A, commit_6, commit_s, commit_S]}
-      - {click: d, width: 20, label: 'DF', swipe_up: commit_7, long_click: [commit_d, commit_D, commit_7, commit_f, commit_F]}
-      - {click: g, width: 20, label: 'GH', swipe_up: commit_8, long_click: [commit_g, commit_G, commit_8, commit_h, commit_H]}
-      - {click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [commit_j, commit_J, commit_9, commit_k, commit_K]}
-      - {click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [commit_l, commit_L, commit_0, commit_l, commit_L]}
+      - {click: a, label: A, width: 16.6, swipe_up: commit_8, swipe_down: "~", long_click: [commit_8, commit_A]}
+      - {click: s, label: SD, width: 16.6, swipe_up: commit_9, swipe_down: "/", long_click: [commit_9, commit_S, commit_s]}
+      - {click: f, label: FG, width: 16.6, swipe_up: commit_0, swipe_down: ";", long_click: [commit_0, commit_F, commit_f]}
+      - {click: h, label: H, width: 16.6, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_halfpoundsign, commit_H, commit_h ] }
+      - {click: j, label: JK, width: 16.6, swipe_up: commit_halfat,  swipe_down: "@", long_click: [commit_halfat, commit_J, commit_j]}
+      - {click: l, label: L, width: 16.6, swipe_up: commit_halfquote,  swipe_down: "'", long_click: [commit_halfquote, commit_L, commit_l]}
       #3
-      - {click: send_semicolon, width: 13}
-      - {width: 3}
-      - {click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [commit_z, commit_Z, commit_halfat, commit_x, commit_X]}
-      - {click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_halfquestionmark, long_click: [commit_c, commit_C, commit_halfquestionmark, commit_v, commit_V]}
-      - {click: b, width: 17, label: 'BN', swipe_up: commit_halfcomma, swipe_down: commit_fullcomma, long_click: [commit_b, commit_Q, commit_fullcomma, commit_w, commit_W]}
-      - {click: m, width: 17, label: 'M', swipe_up: commit_halfdot, swipe_down: commit_fulldot, ick: [commit_m, commit_fulldot, commit_M]}
-      - {width: 3}
-      - {click: backspace, width: 13}
+      - {click: send_semicolon, width: 14.3}
+      - {click: z, label: Z, width: 14.3, swipe_up: commit_halfminus,  swipe_down: "-", long_click: [commit_halfminus, commit_Z, commit_z]}
+      - {click: x, label: XC, width: 14.3, swipe_up: commit_fullexclamationpoint,  swipe_down: "!", long_click: [ commit_fullexclamationpoint, commit_C, commit_c ] }
+      - {click: v, label: V, width: 14.3, swipe_up: commit_fullquestionmark,  swipe_down: "?", long_click: [ commit_halfpoundsign, commit_C, commit_c ] }
+      - {click: b, label: BN, width: 14.3, swipe_up: commit_fullcomma,  swipe_down: ",", long_click: [ commit_fullcomma, commit_B, commit_b ] }
+      - {click: m, label: M, width: 14.3, swipe_up: "commit_fulldot",  swipe_down: ".", long_click: [ 。, commit_M, commit_m ] }
+      - {click: backspace, width: 14.3, name: backspace, preview: false}
       #4
-      - {click: eisu_toggle_符_symbols, width: 16, name: symbol, preview: false}
-      - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 16, name: number, preview: false}
-      - {click: space, width: 36, name: space, swipe_up: send_2, preview: false}
-      - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false}
-      - {click: return, width: 20, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
+      - {click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false}
+      - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false}
+      # - {width: 0.5}
+      - {click: space, width: 38, name: space, swipe_up: send_2, preview: false}
+      - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false}
+#      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
+      # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
+      - {click: return, width: 24, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
+    width: 10
 
 
   english:
     ascii_mode: 1
+    lock: true
     name: english_keyboard
     keys:
       #1
@@ -582,10 +588,10 @@ preset_keyboards:
       - {click: eisu_toggle_符_symbols, width: 14, name: symbol}
       - {click: eisu_toggle_123_number, width: 10, name: number}
       - {click: send_dot, width: 10 }
-      - {click: space, width: 34, name: space}
+      - {click: space, width: 31, name: space}
       #- {click: eisu_toggle_返回_default, width: 11, name: english}
-      - {click: eisu_toggle_返回_default_schema_default, width: 12, name: english, preview: false}
-      - {click: return, width: 20, name: return, composing: confirm}
+      - {click: eisu_toggle_返回_default_schema_default, width: 11, name: english, preview: false}
+      - {click: return, width: 24, name: return, composing: confirm}
 
   number:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -806,10 +812,10 @@ preset_keys:
   send_3: {label: "", send: 3}
   send_2: {label: "", send: 2}
   send_dot: {label: ".", send: .}
-  #分词
-  participle: {label: 分词, send: "'"}
   #分号
   send_semicolon: {label: ";", send: ";"}
+  #分词
+  participle: {label: 分词, send: "'"}
   #换行
   next: {label: "换行", commit: "\n"}
 
@@ -1061,7 +1067,6 @@ preset_keys:
 
   #commit symbol
   commit_halfcomma: {label: ",", commit: ","}
-  commit_halfdot: {label: ".", commit: "."}
   commit_fulltilde: {label: "～", commit: "～"}
   commit_half_tilde: {label: "~", commit: "~"}
   commit_half_tilde_no_functional: {label: "~", commit: "~", functional: false}
@@ -1074,10 +1079,27 @@ preset_keys:
   commit_halfminus: {label: "-", commit: "-"}
   commit_halfunderline: {label: "_", commit: "_"}
   commit_halfpoundsign: {label: "#", commit: "#"}
-  commit_halfquestionmark: {label: "?", commit: "?"}
   commit_fullquestionmark: {label: "？", commit: "？"}
   commit_fullexclamationpoint: {label: "！", commit: "！"}
   commit_fullcomma: {label: "，", commit: "，"}
   commit_fulldot: {label: "。", commit: "。"}
   commit_halfquote: {label: "”", commit: "”"}
 
+  18keyq: { label: " Q ", send: "q" }
+  18keywe: { label: "W E", send: "w" }
+  18keyrt: { label: "R T", send: "r" }
+  18keyy: { label: " Y ", send: "y" }
+  18keyu: { label: " U ", send: "u" }
+  18keyio: { label: "I O", send: "i" }
+  18keyp: { label: " P ", send: "p" }
+  18keya: { label: " A ", send: "a" }
+  18keysd: { label: "S D", send: "s" }
+  18keyfg: { label: "F G", send: "f" }
+  18keyh: { label: " H ", send: "h" }
+  18keyjk: { label: "J K", send: "j" }
+  18keyl: { label: " L ", send: "l" }
+  18keyz: { label: " Z ", send: "z" }
+  18keyxc: { label: "X C", send: "x" }
+  18keyv: { label: " V ", send: "v" }
+  18keybn: { label: "B N", send: "b" }
+  18keym: { label: " M ", send: "m" }
