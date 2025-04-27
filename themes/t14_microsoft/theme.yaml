@@ -13,21 +13,21 @@ style:
     dark: dark #竖屏
     dark_land: dark_land #横屏
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
-    keyboards_land: [ default, english, number, symbols ] #横屏
+    # keyboards_land: [ default, english, number, symbols ] #横屏
   HarmonyOS:
     light: light #竖屏
     light_land: light_land #横屏
     dark: dark #竖屏
     dark_land: dark_land #横屏
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
-    keyboards_land: [ default_land, english, number_land, symbols ] #横屏
+    # keyboards_land: [ default_land, english, number_land, symbols ] #横屏
   iOS:
     light: light #竖屏
     light_land: light_land #横屏
     dark: dark #竖屏
     dark_land: dark_land #横屏
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
-    keyboards_land: [ default_land, english, number_land, symbols ] #横屏
+    # keyboards_land: [ default_land, english, number_land, symbols ] #横屏
   iPadOS:
     light: default
     dark: default
@@ -46,11 +46,15 @@ preset_styles:
     font: default
   light_land:
     color_schema: default
-    candidate: default
+    candidate: default_land
     font: default
   dark:
     color_schema: dark
     candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
     font: default
 
 #预设的字体
@@ -107,9 +111,9 @@ preset_candidates:
   default:
     margin: 5 #候选项外边距
     padding: 5 #候选项内边距
-    spacing: 5 #候选间距
+    spacing: 8 #候选间距
     use_cursor: true #高亮候选项
-    candidate_view_height: 44 #候选区高度
+    candidate_view_height: 36 #候选区高度
     comment_height: 12 #编码提示区高度
     comment_on_top: true #编码提示在上方或右侧
     text_height: 20 #编码区高度
@@ -124,6 +128,9 @@ preset_candidates:
         more_button_width: 64
       candidate_menu:
         spacing: 28
+  default_land:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
 
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
@@ -481,9 +488,10 @@ preset_keyboards:
     ascii_mode: 0
     height: 46
     width: 10
-    height_land: 30
+    height_land: 34
     horizontal_gap: 6
     vertical_gap: 10
+    vertical_gap_land: 4
     round_corner: 6
     key_text_offset_x: 0
     key_text_offset_y: 0
@@ -515,7 +523,7 @@ preset_keyboards:
       - {click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [commit_j, commit_J, commit_9, commit_k, commit_K]}
       - {click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [commit_l, commit_L, commit_0, commit_l, commit_L]}
       #3
-      - {click: ";", label: 分词, width: 13}
+      - {click: send_semicolon, width: 13}
       - {width: 3}
       - {click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [commit_z, commit_Z, commit_halfat, commit_x, commit_X]}
       - {click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_halfquestionmark, long_click: [commit_c, commit_C, commit_halfquestionmark, commit_v, commit_V]}
@@ -526,9 +534,9 @@ preset_keyboards:
       #4
       - {click: eisu_toggle_符_symbols, width: 16, name: symbol, preview: false}
       - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 16, name: number, preview: false}
-      - {click: space, width: 36, name: space, swipe_up: send_2, preview: false}
+      - {click: space, width: 36, name: space, swipe_up: select_scecond, preview: false}
       - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false}
-      - {click: return, width: 20, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
+      - {click: return, width: 20, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false}
 
 
   english:
@@ -578,51 +586,11 @@ preset_keyboards:
       #- {click: eisu_toggle_返回_default, width: 11, name: english}
       - {click: eisu_toggle_返回_default_schema_default, width: 12, name: english, preview: false}
       - {click: return, width: 20, name: return, composing: confirm}
-  number_land:
-    #。？！…（））；、～:[]ï`#：+*/×
-    menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
-    ascii_mode: 1
-    horizontal_gap: 6
-    vertical_gap: 10
-    name: number_keyboard
-    preview: false
-    height: 46
-    width: 22
-    keys:
-      #1
-      # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 115, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
-      - {click: 1, height: 34}
-      - {click: 2, height: 34}
-      - {click: 3, height: 34}
-      - {click: backspace, width: 17, height: 34, name: backspace}
-
-      # # #2
-      - {width: 17}
-      - {click: 4, height: 34}
-      - {click: 5, height: 34}
-      - {click: 6, height: 34}
-      - {click: send_dot, width: 17, height: 34, name: dot}
-
-      - {width: 17}
-      - {click: 7, height: 34}
-      - {click: 8, height: 34}
-      - {click: 9, height: 34}
-      - {click: commit_halfat, width: 17, height: 34, name: halfat}
-
-      # - {width: 1}
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 32, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 32}
-      - {click: commit_0, height: 32}
-      - {click: space, name: space, height: 32}
-      - {click: return, name: return, width: 17, height: 32, composing: confirm}
 
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 1
-    horizontal_gap: 6
-    vertical_gap: 10
     name: number_keyboard
     preview: false
     height: 46
@@ -630,7 +598,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
@@ -650,11 +618,11 @@ preset_keyboards:
       - {click: commit_halfat, width: 17, height: 50, name: halfat}
 
       # - {width: 1}
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 44}
-      - {click: commit_0, height: 44}
-      - {click: space, name: space, height: 44}
-      - {click: return, name: return, width: 17, height: 44, composing: confirm}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 46}
+      - {click: commit_0, height: 46}
+      - {click: space, name: space, height: 46}
+      - {click: return, name: return, width: 17, height: 46, composing: confirm}
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -725,8 +693,7 @@ preset_keyboards:
       - {click: eisu_toggle_返回_default_schema_default, width: 13, name: default}
       - {click: eisu_toggle_123_number, name: numberPeriodFull, width: 13}
       - {click: space, width: 41, name: space}
-      - {click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false}
-      # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false}
       - {click: return, width: 20, name: return, composing: confirm}
   half_symbols:
     ascii_mode: 0
@@ -838,10 +805,14 @@ preset_keys:
   send_3: {label: "", send: 3}
   send_2: {label: "", send: 2}
   send_dot: {label: ".", send: .}
-
+  #分词
+  participle: {label: 分词, send: "'"}
+  #分号
+  send_semicolon: {label: ";", send: ";"}
   #换行
   next: {label: "换行", commit: "\n"}
-
+  select_scecond: {label: "次选", send: 2}
+  select_third: {label: "三选", send: 3}
 
   #eisu_toggle_schem
   eisu_toggle_schema_en: {label: "ABC", send: Eisu_toggle, select: easy_en, option: schema}
@@ -934,8 +905,8 @@ preset_keys:
   ##
   #引号 “”""＂＂「」『』
   # “”
-  text_fullquotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
-  text_full_quotation_mark_left_default_no_functional: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}", functional: false}
+  text_fullquotationmark_left_default: {label: "“", text: "“”{Left}{eisu_toggle_default}"}
+  text_full_quotation_mark_left_default_no_functional: {label: "“", text: "“”{Left}{eisu_toggle_default}", functional: false}
   text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
   text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
   text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}

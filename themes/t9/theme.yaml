@@ -43,11 +43,15 @@ preset_styles:
     font: default
   light_land:
     color_schema: default
-    candidate: default
+    candidate: default_land
     font: default
   dark:
     color_schema: dark
     candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
     font: default
 
 #预设的字体
@@ -102,26 +106,17 @@ preset_fonts:
 #预设候选栏
 preset_candidates:
   default:
-    margin: 5 #候选项外边距
     padding: 5 #候选项内边距
-    spacing: 5 #候选间距
+    spacing: 8 #候选间距
     use_cursor: true #高亮候选项
-    candidate_view_height: 44 #候选区高度
-    comment_height: 12 #编码提示区高度
-    comment_on_top: true #编码提示在上方或右侧
+    candidate_view_height: 36 #候选区高度
     text_height: 20 #编码区高度
-    more_button_width: 44 #更多按钮宽度
     corner_radius: 6 #圆角半径
     hilited_corner_radius: 6 #高亮圆角半径
     view_height: 28 #候选区高度
-    specified_name:
-      candidate_text_collection_view:
-        candidate_view_height: 44 #候选区高度
-      candidate_tools:
-        more_button_width: 64
-      candidate_menu:
-        spacing: 28
-
+  default_land:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
   #注意：
   #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
   #2,同时有back_color和back_image时，back_image生效.
@@ -476,7 +471,7 @@ preset_color_schemes:
 preset_keyboards:
   default:
     ascii_mode: 0
-    height_land: 30
+    height_land: 34
     round_corner: 6
     key_text_offset_x: 0
     key_text_offset_y: 0
@@ -495,6 +490,7 @@ preset_keyboards:
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     horizontal_gap: 6
     vertical_gap: 10
+    vertical_gap_land: 4
     name: number_keyboard
     preview: false
     height: 46
@@ -502,8 +498,8 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["，", "。", "？", "！", "…", "~", "'", "、"], width: 17, height: 162, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
-      - {click: 1, label: '分词', height: 50, swipe_up: commit_1,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
+      - {collection: ["，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'"], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {click: 1, label: '分词', height: 50, swipe_up: commit_1,  swipe_down: "一", long_click: [commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot]}
       - {click: a, label: 'ABC', height: 50, swipe_up: commit_2,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
       - {click: d, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F]}
       - {click: backspace, width: 17, height: 50, name: backspace}
@@ -520,19 +516,18 @@ preset_keyboards:
       - {click: p, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S]}
       - {click: t, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V]}
       - {click: w, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z]}
-      - {click: return, name: return, width: 17, height: 100, height_land: 70, composing: confirm}
+      - {click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm}
       ## #4
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
-      - {click: eisu_toggle_123_number, width: 12, height: 44}
-      - {click: space, name: space, width: 42, height: 44}
-      - {click: eisu_toggle_ABC_english, width: 12, height: 44}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default}
+      - {click: eisu_toggle_123_number, width: 12, height: 46}
+      - {click: space, name: space, swipe_up: commit_0, width: 42, height: 46}
+      - {click: eisu_toggle_ABC_english, width: 12, height: 46}
       # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
 
   english:
     height: 46
     width: 10
-    vertical_gap: 10
     preview: true
     ascii_mode: 1
     lock: true
@@ -585,7 +580,6 @@ preset_keyboards:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 1
-    horizontal_gap: 6
     name: number_keyboard
     preview: false
     height: 46
@@ -593,7 +587,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
@@ -612,17 +606,16 @@ preset_keyboards:
       - {click: 9, height: 50}
       - {click: commit_halfat, width: 17, height: 50, name: halfat}
 
-      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
-      - {click: eisu_toggle_返回_default, width: 22, height: 44}
-      - {click: commit_0, height: 44}
-      - {click: space, name: space, height: 44, width: 22}
-      - {click: return, name: return, width: 17, height: 44, composing: confirm}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 46}
+      - {click: commit_0, height: 46}
+      - {click: space, name: space, height: 46, width: 22}
+      - {click: return, name: return, width: 17, height: 46, composing: confirm}
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 0
-    vertical_gap: 10
     preview: true
     height: 46
     width: 10
@@ -695,7 +688,6 @@ preset_keyboards:
       # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
       - {click: return, width: 20, name: return, composing: confirm}
   half_symbols:
-    vertical_gap: 10
     preview: true
     ascii_mode: 0
     height: 46
@@ -910,8 +902,8 @@ preset_keys:
   ##
   #引号 “”""＂＂「」『』
   # “”
-  text_fullquotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
-  text_full_quotation_mark_left_default_no_functional: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}", functional: false}
+  text_fullquotationmark_left_default: {label: "“", text: "“”{Left}{eisu_toggle_default}"}
+  text_full_quotation_mark_left_default_no_functional: {label: "“", text: "“”{Left}{eisu_toggle_default}", functional: false}
   text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
   text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
   text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
@@ -1081,6 +1073,7 @@ preset_keys:
   commit_fullquestionmark: {label: "？", commit: "？"}
   commit_fullexclamationpoint: {label: "！", commit: "！"}
   commit_fullcomma: {label: "，", commit: "，"}
+  commit_half_dot: {label: ".", commit: "."}
   commit_fulldot: {label: "。", commit: "。"}
   commit_halfquote: {label: "”", commit: "”"}
 
